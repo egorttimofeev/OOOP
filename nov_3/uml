@@ -1,0 +1,36 @@
+@startuml
+class Teacher {
+  id: int
+  name: str
+}
+
+class Group {
+  id: int
+  name: str
+}
+
+class Discipline {
+  id: int
+  name: str
+}
+
+class Task {
+  id: int
+  name: str
+  hours: int
+  teacher_id: int
+  discipline_id: int
+  group_id: int
+}
+
+class TaskJournal {
+  task_id: int
+  grades: int
+}
+
+Teacher --> Task
+Group --> Task
+Discipline --> Task
+Task --> TaskJournal
+
+@enduml
